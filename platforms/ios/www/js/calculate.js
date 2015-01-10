@@ -16,8 +16,6 @@ function valueCheck(){
       }
     }
 
-
-
 function convert(degree){
  if (degree == "C"){
    F = document.getElementById("celsius").value * 9/5 + 32;
@@ -38,3 +36,12 @@ function clearVal(){
   document.getElementById("faren").style.color = "#434343";
   document.getElementById("celsius").style.color = "#434343";
 }
+
+var calcBtn = document.getElementById('btnCalc')
+calcBtn.onclick = valueCheck;
+//
+var clrBtn = document.getElementById('btnClear')
+clrBtn.onclick = clearVal;
+
+calcBtn.addEventListener('touchstart', valueCheck, false);
+clrBtn.addEventListener('touchstart', clearVal, false);

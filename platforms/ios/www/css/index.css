@@ -126,7 +126,7 @@ h1 {
 }
 
 #tippytop{
-  font-family: wisdom, raleway, arial;
+  font-family:  wisdom, 'Oleo Script', raleway, arial;
   font-size:50px;
   text-align:center;
   color: #545454;
@@ -135,7 +135,7 @@ h1 {
 
 #container{
   background-color: rgba(255,255,255,0.9);
-  width:60%;
+  width:80%;
   margin:auto;
   border-radius:10px;
 

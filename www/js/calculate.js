@@ -1,28 +1,3 @@
-var btnCalc = document.getElementById("btnCalc");
-
-btnCalc.addEventListener("mouseup", tapOrClick, false);
-btnCalc.addEventListener("touchend", tapOrClick, false);
-
-function tapOrClick(event) {
-  //handle tap or click.
-
-  event.preventDefault();
-  return false;
-}
-
-var btnClear = document.getElementById("btnClear");
-
-btnClear.addEventListener("mouseup", tapOrClick1, false);
-btnClear.addEventListener("touchend", tapOrClick1, false);
-
-function tapOrClick1(event) {
-  //handle tap or click.
-
-  event.preventDefault();
-  return false;
-}
-
-
 function valueCheck(){
   var x = document.getElementById('celsius').value;
   var y = document.getElementById('faren').value;
@@ -40,8 +15,6 @@ function valueCheck(){
         }
       }
     }
-
-
 
 function convert(degree){
  if (degree == "C"){
@@ -63,3 +36,12 @@ function clearVal(){
   document.getElementById("faren").style.color = "#434343";
   document.getElementById("celsius").style.color = "#434343";
 }
+
+var calcBtn = document.getElementById('btnCalc')
+calcBtn.onclick = valueCheck;
+//
+var clrBtn = document.getElementById('btnClear')
+clrBtn.onclick = clearVal;
+
+calcBtn.addEventListener('touchstart', valueCheck, false);
+clrBtn.addEventListener('touchstart', clearVal, false);
