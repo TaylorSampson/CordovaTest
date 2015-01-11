@@ -2,7 +2,7 @@ function valueCheck(){
   var x = document.getElementById('celsius').value;
   var y = document.getElementById('faren').value;
   if(x != "" && y != ""){
-    alert("Please only enter one temperature value");
+    // alert("Please only enter one temperature value");
   } else{
       if(x != ""){
         convert('C');
@@ -23,7 +23,7 @@ function convert(degree){
    document.getElementById("celsius").value += "˚ in Celsius"
    document.getElementById("faren").style.color = "#38d8ac";
    document.getElementById("lbl").innerHTML = "Is Equal To";
-   
+
 
  }else{
    C = (document.getElementById("faren").value - 32) * 5/9;
