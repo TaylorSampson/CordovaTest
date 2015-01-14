@@ -28,8 +28,13 @@
 #import <Cordova/CDVViewController.h>
 #import <Cordova/CDVCommandDelegateImpl.h>
 #import <Cordova/CDVCommandQueue.h>
+#import <iAd/iAd.h>
 
-@interface MainViewController : CDVViewController
+@interface MainViewController : CDVViewController <ADBannerViewDelegate>
+
+{
+    ADBannerView *adBanner;
+}
 
 @end
 

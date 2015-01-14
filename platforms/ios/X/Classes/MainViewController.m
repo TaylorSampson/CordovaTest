@@ -75,8 +75,35 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    //iAD banner bottom screen
+    adBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0.0, 600.0, 320.0, 50.0)];
+    adBanner.delegate = self;
+    [self.view addSubview:adBanner];
 }
 
+-(BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
+{
+    return YES;
+}
+
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    if(adBanner.bannerLoaded)
+        {
+            NSLog(@"banner loaded");
+            
+            CGRect contentFrame = self.view.bounds;
+            
+            CGRect bannerFrame = adBanner.frame;
+            
+            contentFrame.size.height -= adBanner.frame.size.height;
+            
+            bannerFrame.origin.y = contentFrame.size.height;
+            
+            adBanner.frame = bannerFrame; 
+        }
+}
 - (void)viewDidUnload
 {
     [super viewDidUnload];
