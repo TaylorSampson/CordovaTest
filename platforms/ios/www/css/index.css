@@ -127,7 +127,7 @@ h1 {
 }
 
 #tippytop{
-  font-family:  wisdom, 'Oleo Script', raleway, arial;
+  font-family:  Pacifico, 'Oleo Script', raleway, arial;
   font-size:50px;
   text-align:center;
   color: #545454;
@@ -210,6 +210,6 @@ input[type="text"]
   margin-left:1%;
 }
 
-#lbl{
+#lbl, #lbl2{
   margin-bottom: 4%;
 }
