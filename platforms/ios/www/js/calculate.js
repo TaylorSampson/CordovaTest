@@ -2,8 +2,8 @@ function valueCheck(){
   var x = document.getElementById('celsius').value;
   var y = document.getElementById('faren').value;
   var z = document.getElementById('kelvin').value;
-  if(x != "" && y != "" && z != ""){
-    // alert("Please only enter one temperature value");
+  if((x != "" && y != "") || (x!="" && z != "") || (y!= "" & z!="") || (x != "" && y!= "" & z!="")){
+
   } else{
       if(x != ""){
         convert('C');
@@ -20,6 +20,8 @@ function valueCheck(){
       }
     }
 
+
+
 function convert(degree){
  if (degree == "C"){
 // declaring variables to hold the values in the textboxes
@@ -28,7 +30,7 @@ function convert(degree){
    K = C * 1 + 273.15;
 
 // Operations on the farenheight textbox
-   document.getElementById("faren").value = Math.round(F) + "˚ Farenheight";
+   document.getElementById("faren").value = Math.round(F) + "˚ Fahrenheit";
    document.getElementById("celsius").value += "˚ Celsius"
    document.getElementById("faren").style.color = "#38d8ac";
    document.getElementById("lbl").innerHTML = "Equals";
@@ -46,7 +48,7 @@ function convert(degree){
    K = C * 1 + 273;
    document.getElementById("celsius").value = Math.round(C) + "˚ Celsius";
    document.getElementById("celsius").style.color = "#38d8ac";
-   document.getElementById("faren").value += "˚ Farenheight"
+   document.getElementById("faren").value += "˚ Fahrenheit"
    document.getElementById("lbl").innerHTML = "Equals";
 
    document.getElementById("kelvin").value = Math.round(K) + " Kelvin";
@@ -60,7 +62,7 @@ function convert(degree){
    C = K - 273;
    F = C * 9/5 + 32;
 
-   document.getElementById("faren").value = Math.round(F) + "˚ Farenheight";
+   document.getElementById("faren").value = Math.round(F) + "˚ Fahrenheit";
    document.getElementById("celsius").style.color = "#38d8ac";
    document.getElementById("kelvin").value += " Kelvin"
    document.getElementById("lbl").innerHTML = "Equals";
@@ -83,6 +85,20 @@ function clearVal(){
   document.getElementById("lbl2").innerHTML = "Or";
 }
 
+function myFocusFunction(){
+  document.getElementById('celsius').value = "";
+  document.getElementById('faren').value = "";
+  document.getElementById('kelvin').value = "";
+  document.getElementById("kelvin").style.color = "#434343";
+  document.getElementById("faren").style.color = "#434343";
+  document.getElementById("celsius").style.color = "#434343";
+
+}
+
+
+var txtfocus1 = document.getElementById('celsius')
+var txtfocus2 = document.getElementById('faren')
+var txtfocus3 = document.getElementById('kelvin')
 
 var calcBtn = document.getElementById('btnCalc')
 calcBtn.onclick = valueCheck;
@@ -92,3 +108,6 @@ clrBtn.onclick = clearVal;
 //
 calcBtn.addEventListener('touchstart', valueCheck, false);
 clrBtn.addEventListener('touchstart', clearVal, false);
+txtfocus1.addEventListener('focus', myFocusFunction, false );
+txtfocus2.addEventListener('focus', myFocusFunction, false);
+txtfocus3.addEventListener('focus', myFocusFunction, false);

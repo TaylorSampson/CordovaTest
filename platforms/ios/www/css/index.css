@@ -1,21 +1,7 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+ /* Background pattern from subtlepatterns.com */
+
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -27,16 +13,6 @@ body {
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background-color:#E4E4E4;
     background-image: url(../img/swirl_pattern.png);
-    /*background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );*/
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
@@ -139,6 +115,7 @@ h1 {
   width:80%;
   margin:auto;
   border-radius:10px;
+  margin-bottom:5%;
 }
 
 .center{
@@ -151,6 +128,7 @@ h1 {
   margin-bottom:5%;
   text-align:center;
   box-shadow:none !important;
+  width:70%;
 }
 
 input[type="text"]
@@ -179,19 +157,7 @@ input[type="text"]
   text-align:center;
 }
 
-#btnCalc{
-  background-color: #38d8ac;
-  border: 0px solid #38d8ac;
-  border-radius: 20px;
-  height:35px;
-  width:100px;
-  font-family: quicksand, 'raleway', helvetica, sans-serif;
-  font-size:13px;
-  color:#434343;
-  margin-bottom:5%;
-}
-
-.btn:active{
+.btnC:active{
   background-color:#6dffd7;
   color:#434343;
 }
@@ -212,4 +178,9 @@ input[type="text"]
 
 #lbl, #lbl2{
   margin-bottom: 4%;
+}
+
+footer{
+  text-align:center;
+  margin-top:2%;
 }
