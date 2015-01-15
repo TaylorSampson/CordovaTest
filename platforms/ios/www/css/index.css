@@ -107,11 +107,12 @@ h1 {
   font-size:45px;
   text-align:center;
   color: #545454;
-  padding-top:5%;
+  padding-top:2%;
+  margin-bottom: -1px; 
 }
 
 #container{
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255,255,255,0.85);
   width:80%;
   margin:auto;
   border-radius:10px;
@@ -129,11 +130,15 @@ h1 {
   text-align:center;
   box-shadow:none !important;
   width:70%;
+  margin-top:-2%;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Lato;
 }
 
 input[type="text"]
 {
-  font-family:quicksand;
+  font-family:Lato;
   font-size: 15px;
   color: #434343;
   border: 1px solid #bfbfbf;
@@ -146,7 +151,11 @@ input[type="text"]
  }
 
  .center h4{
-  margin-top: -10px;
+  margin-top: -5%;
+  font-family: Lato;
+  font-size: 15px;
+  visibility: hidden;
+  margin-top: 1px;
   }
 
   h4:hover{
@@ -155,6 +164,7 @@ input[type="text"]
 
 .btndiv{
   text-align:center;
+  padding-top:1%;
 }
 
 .btnC:active{
@@ -168,7 +178,8 @@ input[type="text"]
   border-radius: 20px;
   height:35px;
   width:100px;
-  font-family: quicksand, 'raleway', helvetica, sans-serif;
+  font-family: Lato, 'raleway', helvetica, sans-serif;
+  font-weight: 700;
   font-size:13px;
   color:#434343;
   margin-bottom:5%;
@@ -177,7 +188,6 @@ input[type="text"]
 }
 
 #lbl, #lbl2{
-  margin-bottom: 4%;
 }
 
 footer{

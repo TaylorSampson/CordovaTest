@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <title>Temperature Converter</title>
     </head>
@@ -16,31 +17,38 @@
 
         <div id="container">
         <p id="tippytop">Temperature Converter</p>
+
+
+        <div id = 'junk'>
+        <div  class="center">
+          <h4 id ="lbl3">Celsius</h4>
+        </div>
+
           <div class="center">
-            <input placeholder="Temperature in C" id="celsius" class="txtbx" type = "text" pattern="\d*"autofocus></input>
+            <input placeholder="Temperature in C" id="celsius" class="txtbx" type = "number" autofocus></input>
           </div>
 
           <div  class="center">
-            <h4 id ="lbl">Or</h4>
+            <h4 id ="lbl">Fahrenheit</h4>
           </div>
 
           <div class="center">
-            <input placeholder="Temperature in F" class="txtbx" id="faren" type = "text" pattern="\d*"></input>
+            <input placeholder="Temperature in F" class="txtbx" id="faren" type = "number" ></input>
           </div>
 
           <div  class="center">
-            <h4 id ="lbl2">Or</h4>
+            <h4 id ="lbl2">Kelvin</h4>
           </div>
 
           <div class="center">
-            <input placeholder="Temperature in K" class="txtbx" id="kelvin" type = "text" pattern="\d*"></input>
+            <input placeholder="Temperature in K" class="txtbx" id="kelvin" type = "number" ></input>
           </div>
 
           <div class="btndiv">
             <button type="button"  id="btnCalc" class="btnC">Calculate</button>
             <button type="button" id="btnClear" class ="btnC">Clear</button>
           </div>
-
+        </div>
         </div>
 
 
