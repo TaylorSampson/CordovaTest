@@ -122,3 +122,6 @@ clrBtn.addEventListener('touchstart', clearVal, false);
 txtfocus1.addEventListener('focus', myFocusFunction, false );
 txtfocus2.addEventListener('focus', myFocusFunction, false);
 txtfocus3.addEventListener('focus', myFocusFunction, false);
+txtfocus1.addEventListener('touchstart', myFocusFunction, false);
+txtfocus2.addEventListener('touchstart', myFocusFunction, false);
+txtfocus3.addEventListener('touchstart', myFocusFunction, false);
