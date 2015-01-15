@@ -1,3 +1,9 @@
+if ('addEventListener' in document) {
+  document.addEventListener('DOMContentLoaded', function() {
+    FastClick.attach(document.body);
+  }, false);
+}
+
 function valueCheck(){
   var x = document.getElementById('celsius').value;
   var y = document.getElementById('faren').value;
@@ -122,6 +128,6 @@ clrBtn.addEventListener('touchstart', clearVal, false);
 txtfocus1.addEventListener('focus', myFocusFunction, false );
 txtfocus2.addEventListener('focus', myFocusFunction, false);
 txtfocus3.addEventListener('focus', myFocusFunction, false);
-txtfocus1.addEventListener('touchstart', myFocusFunction, false);
-txtfocus2.addEventListener('touchstart', myFocusFunction, false);
-txtfocus3.addEventListener('touchstart', myFocusFunction, false);
+txtlbl1.addEventListener('touchstart', myFocusFunction, false);
+txtlbl2.addEventListener('touchstart', myFocusFunction, false);
+txtlbl3.addEventListener('touchstart', myFocusFunction, false);

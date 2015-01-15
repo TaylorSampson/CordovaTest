@@ -25,7 +25,9 @@
         </div>
 
           <div class="center">
-            <input placeholder="Temperature in C" id="celsius" class="txtbx" type = "number" autofocus></input>
+            <lbl id = "txtlbl1">
+              <input placeholder="Temperature in C" id="celsius" class="txtbx needsclick" type = "number"></input>
+            </lbl>
           </div>
 
           <div  class="center">
@@ -33,7 +35,9 @@
           </div>
 
           <div class="center">
-            <input placeholder="Temperature in F" class="txtbx" id="faren" type = "number" ></input>
+            <lbl id = "txtlbl2">
+            <input placeholder="Temperature in F" class="txtbx needsclick" id="faren" type = "number" ></input>
+            </lbl>
           </div>
 
           <div  class="center">
@@ -41,7 +45,9 @@
           </div>
 
           <div class="center">
-            <input placeholder="Temperature in K" class="txtbx" id="kelvin" type = "number" ></input>
+            <lbl id = "txtlbl3">
+              <input placeholder="Temperature in K" class="txtbx needsclick" id="kelvin" type = "number" ></input>
+            </lbl>
           </div>
 
           <div class="btndiv">
@@ -52,7 +58,7 @@
         </div>
 
 
-
+        <script type="text/javascript" src="js/fastclick.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/calculate.js"></script>
