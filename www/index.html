@@ -15,41 +15,48 @@
     </head>
     <body>
 
+<!-- Contains all accessible elements on the page in the semi-transparent container -->
         <div id="container">
         <p id="tippytop">Temperature Converter</p>
 
-
+<!-- Celsius Label -->
         <div id = 'junk'>
         <div  class="center">
           <h4 id ="lbl3">Celsius</h4>
         </div>
 
+<!-- Celsius Input -->
           <div class="center">
             <lbl id = "txtlbl1">
               <input placeholder="Temperature in C" id="celsius" class="txtbx needsclick" type = "number"></input>
             </lbl>
           </div>
 
+<!-- Fahrenheit Label -->
           <div  class="center">
             <h4 id ="lbl">Fahrenheit</h4>
           </div>
 
+<!-- Fahrenheit input -->
           <div class="center">
             <lbl id = "txtlbl2">
             <input placeholder="Temperature in F" class="txtbx needsclick" id="faren" type = "number" ></input>
             </lbl>
           </div>
 
+<!-- Kelvin label -->
           <div  class="center">
             <h4 id ="lbl2">Kelvin</h4>
           </div>
 
+<!-- Kelvin input -->
           <div class="center">
             <lbl id = "txtlbl3">
               <input placeholder="Temperature in K" class="txtbx needsclick" id="kelvin" type = "number" ></input>
             </lbl>
           </div>
 
+<!-- Buttons -->
           <div class="btndiv">
             <button type="button"  id="btnCalc" class="btnC">Calculate</button>
             <button type="button" id="btnClear" class ="btnC">Clear</button>
@@ -57,7 +64,7 @@
         </div>
         </div>
 
-
+<!-- Scripts -->
         <script type="text/javascript" src="js/fastclick.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

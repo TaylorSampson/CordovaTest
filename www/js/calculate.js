@@ -1,16 +1,18 @@
+// Fastclick functionality for the inputs to reduce 300ms delay time
 if ('addEventListener' in document) {
   document.addEventListener('DOMContentLoaded', function() {
     FastClick.attach(document.body);
   }, false);
 }
 
+// verify input of user
 function valueCheck(){
   var x = document.getElementById('celsius').value;
   var y = document.getElementById('faren').value;
   var z = document.getElementById('kelvin').value;
 
   if((x != "" && y != "") || (x!="" && z != "") || (y!= "" & z!="") || (x != "" && y!= "" & z!="")){
-
+    //
   } else{
       if(x != ""){
         convert('C');
@@ -22,6 +24,7 @@ function valueCheck(){
         convert('K');
       }
       else{
+        // If left blank or an non-numeric input is used returns this
         document.getElementById('celsius').placeholder = "Requires Numeric Input";
         document.getElementById('faren').placeholder = "Requires Numeric Input";
         document.getElementById('kelvin').placeholder = "Requires Numeric Input";
@@ -32,6 +35,7 @@ function valueCheck(){
       }
     }
 
+// operation converting the user input
 function convert(degree){
   if (degree == "C"){
     // declaring variables to hold the values in the textboxes
@@ -52,10 +56,11 @@ function convert(degree){
   }
 
  else if (degree == "F"){
-
+  //  declaring variables to hold the values in the text boxes
    F = document.getElementById("faren").value;
    C = (F - 32) * 5/9;
    K = C * 1 + 273;
+  //  operations on the input boxes
    document.getElementById("celsius").value = Math.round(C * 100) / 100;
    document.getElementById("celsius").style.color = "#38d8ac";
    document.getElementById("faren").value = F;
@@ -68,11 +73,11 @@ function convert(degree){
  }
 
  else {
-
+   //same as above
    K = (document.getElementById("kelvin").value )
    C = K - 273;
    F = C * 9/5 + 32;
-
+   //same as above
    document.getElementById("faren").value = Math.round(F * 100) / 100;
    document.getElementById("celsius").style.color = "#38d8ac";
    document.getElementById("kelvin").value += ""
@@ -84,7 +89,7 @@ function convert(degree){
  }
 }
 
-
+// clears all values in the app, along with resetting the font colors
 function clearVal(){
   document.getElementById('celsius').value = "";
   document.getElementById('faren').value = "";
@@ -100,6 +105,7 @@ function clearVal(){
   document.getElementById('kelvin').placeholder = "Temperature In K";
 }
 
+// On focus removes data in the inputboxes
 function myFocusFunction(){
   document.getElementById('celsius').value = "";
   document.getElementById('faren').value = "";
@@ -113,6 +119,7 @@ function myFocusFunction(){
 }
 
 
+//adding event listeners for touch events as well as defining click events
 var txtfocus1 = document.getElementById('celsius')
 var txtfocus2 = document.getElementById('faren')
 var txtfocus3 = document.getElementById('kelvin')
